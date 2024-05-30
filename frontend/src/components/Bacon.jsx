@@ -1,6 +1,8 @@
 import { Fragment } from 'react';
+import Popover from 'components/partials/Popover';
 
 export default function Bacon() {
+    const target ="bacon";
     const styles = `
     .button-lightningbolt {
         --s: .25em; /* control the wave*/
@@ -49,21 +51,12 @@ export default function Bacon() {
     }
     `;
 
-    const copy = () => navigator.clipboard.writeText(styles);
-
     return (
         <Fragment>
-            <button type="button" className="button button-lightningbolt" popovertarget="bacon">
+            <button type="button" className="button button-lightningbolt" popovertarget={target}>
                 Button
             </button>
-            <pre popover="manual" id="bacon" className="bg-gray-800 rounded-xl align-left text-slate-50 w-full max-w-3xl p-4 center m-auto absolute">
-                    <button type="button" className="block ml-auto" popovertarget="bacon" popovertargetaction="hide">
-                        <span aria-hidden="true">🅧</span>
-                        <span className="sr-only">Close</span>
-                    </button>
-                    <button type="button" onClick={copy} className="rounded-xl mx-auto border-solid border-2 py-2 px-5 block">Copy Styles</button>
-                    <code>{styles}</code>
-                </pre>
+            <Popover code={styles} target={target} />
             <style>{styles}</style>
         </Fragment>
     )
