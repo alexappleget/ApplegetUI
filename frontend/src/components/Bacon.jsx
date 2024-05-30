@@ -56,7 +56,7 @@ export default function Bacon() {
             <button type="button" className="button button-lightningbolt" popovertarget={target}>
                 Button
             </button>
-            <Popover code={styles} target={target} />
+            <Popover code={styles} element={target} />
             <style>{styles}</style>
         </Fragment>
     )

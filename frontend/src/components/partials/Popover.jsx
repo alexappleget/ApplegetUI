@@ -1,10 +1,10 @@
-export default function Popover({code, target}) {
+export default function Popover({code, element}) {
 
     const copy = () => navigator.clipboard.writeText(code);
 
     return (
-        <pre popover="manual" id={target} className="bg-gray-800 rounded-xl align-left text-slate-50 w-full max-w-3xl p-4 center m-auto absolute">
-        <button type="button" className="block ml-auto" popovertarget={target} popovertargetaction="hide">
+        <pre popover="manual" id={element} className="bg-gray-800 rounded-xl align-left text-slate-50 w-full max-w-3xl p-4 center m-auto absolute">
+        <button type="button" className="block ml-auto" popovertarget={element} popovertargetaction="hide">
             <span aria-hidden="true">🅧</span>
             <span className="sr-only">Close</span>
         </button>
