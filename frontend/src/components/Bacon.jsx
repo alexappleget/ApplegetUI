@@ -1,5 +1,5 @@
-//import { ReactComponent as YourSvg } from 'assets/sup.svg';
 import { Fragment } from 'react';
+
 export default function Bacon() {
     const styles = `
     .button-lightningbolt {
