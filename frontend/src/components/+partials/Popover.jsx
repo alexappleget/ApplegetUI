@@ -1,5 +1,4 @@
 export default function Popover({code, element}) {
-console.log(code);
     const copy = () => navigator.clipboard.writeText(code);
 
     return (
