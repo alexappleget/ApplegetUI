@@ -1,12 +1,8 @@
-import { Fragment } from 'react';
-import Popover from 'components/partials/Popover';
-
-export default function Bacon() {
-    const target ="bacon";
-    const styles = `
-    .button-lightningbolt {
+export function styles() {
+    return `
+    .button-bacon {
         --s: .25em; /* control the wave*/
-
+    
         padding: .4em .5em;
         background-color: #BF4D28;
         color: #fff;
@@ -48,16 +44,5 @@ export default function Bacon() {
             margin-block: .2em;
             transition: 0s;
         }
-    }
-    `;
-
-    return (
-        <Fragment>
-            <button type="button" className="button button-lightningbolt" popovertarget={target}>
-                Button
-            </button>
-            <Popover code={styles} element={target} />
-            <style>{styles}</style>
-        </Fragment>
-    )
-}
+    }`
+};
