@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import Popover from 'components/partials/Popover';
+import Popover from 'components/+partials/Popover';
 import { styles } from 'components/Bacon/styles';
 
 export default function Bacon() {
